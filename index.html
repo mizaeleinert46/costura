@@ -9,7 +9,14 @@
     <!-- Taboola Pixel Code -->
 <script type='text/javascript'>
   window._tfa = window._tfa || [];
+  
+  // 1. Evento Básico de Page View (Obrigatório em todas as páginas)
   window._tfa.push({notify: 'event', name: 'page_view', id: 1510151});
+  
+  // 2. Evento ViewContent (Micro Conversão - ADICIONAR APENAS NA PRE-SELL)
+  // Use o 'value' e 'currency' se quiser atribuir um valor ao micro evento.
+  window._tfa.push({notify: 'event', name: 'ViewContent', id: 1510151, value: 0.1, currency: 'BRL'});
+  
   !function (t, f, a, x) {
          if (!document.getElementById(x)) {
             t.async = 1;t.src = a;t.id=x;f.parentNode.insertBefore(t, f);
